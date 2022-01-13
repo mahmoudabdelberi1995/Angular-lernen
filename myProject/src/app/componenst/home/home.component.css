@@ -1,0 +1,21 @@
+.edit{
+    color: rgb(228, 34, 163);
+    width: 0px;
+}
+.delete {
+    color: rgb(32, 14, 26);
+    width: 40px;
+}
+
+.add {
+    color: rgb(80, 20, 220);
+    width: 40px;
+}
+
+.searchBox {
+    
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+}

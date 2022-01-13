@@ -1,0 +1,34 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "name": "tv",
+      "prix": "500",
+      "quntite": 411
+    },
+    {
+      "name": "test",
+      "prix": "154",
+      "quantite": "20",
+      "id": 6
+    },
+    {
+      "name": "test",
+      "prix": "154",
+      "quantite": "20",
+      "id": 5
+    },
+    {
+      "name": "eFTEmKf3Pu4KiWU",
+      "prix": "044",
+      "quantite": "147",
+      "id": 7
+    },
+    {
+      "name": "ddd",
+      "prix": "Abdelberi",
+      "quantity": "01607907919",
+      "id": 8
+    }
+  ]
+}

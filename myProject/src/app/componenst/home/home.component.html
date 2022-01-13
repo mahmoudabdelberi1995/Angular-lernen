@@ -1,0 +1,65 @@
+
+<div>
+<form  class="form-inline" #f="ngForm" (ngSubmit)="onSearchProduct()">
+  <div>
+    <input  type="text"  class="form-control" name="keyword" [(ngModel)]="searchTerm" (keyup)="onSearchProduct()" >
+    <button class="btn btn-sm btn-outline-info ml-2" ><span class="fa fa-search"></span></button>
+  </div>
+</form>
+</div>
+
+
+
+      <div class="container">
+        <ng-container *ngIf="(products$ | async) as result" [ngSwitch]="result.dataState">
+
+        <ng-container *ngSwitchCase="DataStateEnum.LOADING"> 
+          LOADIING,,,,,,,,,,,,,,,,
+        </ng-container>
+
+        <ng-container *ngSwitchCase="DataStateEnum.ERROR"> 
+          <div class="alert-danger"> 
+            {{result.errorMessage}}
+          </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="DataStateEnum.LOADED"> 
+
+        <table class="table" style="margin-top: 30px;">
+          <thead class="thead-dark">
+            <tr><th>ID</th>     <th>Nom</th><th>Prix</th><th>Quantité</th>  <th>delete</th>   <th>edit</th>   <th>add</th> </tr>
+          </thead>
+
+          <tbody>
+         <tr *ngFor="let p of result.data">
+          <th>{{p.id}}</th> 
+          <td>{{p.name}}</td>
+          <td>{{p.prix}}</td>
+          <td>{{p.quantite}}</td>
+         
+         
+          <td>
+            <button  class="btn btn-danger">
+                <span class="fa fa-trash-o"></span>
+            </button>
+           </td>
+           <td>
+            <button  class="btn btn-primary" routerLink="/editProduct">
+                <span class="fa fa-edit"></span>
+            </button>
+           </td>
+           <td>
+            <button  class="btn btn-dark" routerLink="/addProduct">
+                <span class="fa fa-plus"></span>
+            </button>
+           </td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </ng-container>
+</ng-container>
+
+  
+    
+</div>

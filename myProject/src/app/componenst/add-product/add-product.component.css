@@ -1,0 +1,15 @@
+button {
+    margin:0 auto;
+    display:block;
+    width: 150px;
+}
+
+.card {
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 600px;
+    height: 600px;
+    box-shadow :2px 5px 16px 0px #0B325E;
+  }

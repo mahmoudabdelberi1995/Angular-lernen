@@ -1,0 +1,43 @@
+<div class="card">
+<p class="font-italic" style="text-align: center;">Patient hinzufügen</p>
+
+<div class="container-fluid">
+<form  [formGroup]="ProductFormGroup" *ngIf="ProductFormGroup">
+  <div class="form-group">
+    <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label" >Vorname des Paients</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputPassword" placeholder="Nom de Produit" formControlName="name">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Nachname des Patients</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputPassword" placeholder="Nachname des Patients"  formControlName="prix">
+        </div>
+      </div>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-2 col-form-label" >Adresse</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputPassword" placeholder="Adresse" formControlName="quantity">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-2 col-form-label" >Email-Adresse</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputPassword" placeholder="Email-Adresse" formControlName="quantity">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword" class="col-sm-2 col-form-label" >Telefonnummer</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputPassword" placeholder="Telefonnummer" formControlName="quantity">
+      </div>
+    </div>
+    <div class="button">
+    <button type="button" class="btn btn-primary" (click)="onSaveProduct()">Hinzufügen</button>
+</div>
+  </div>
+  </form>
+</div>
+</div>
